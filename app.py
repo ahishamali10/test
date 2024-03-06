@@ -2,9 +2,10 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/')
-def hello_world():
-    return 'Hello, World!'
+@app.route('/', defaults={"username":"World"})
+@app.route('/<string:username>')
+def hello_world(username):
+    return f'Hello, {username}'
 
 if __name__ == '__main__':
     # Note: Google Cloud Run will set the PORT environment variable to tell you what port to listen on
