@@ -1,3 +1,10 @@
-def git_opeation():
- print("I am adding example.py file to the remote repository.")
-git_opeation()
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def hello():
+    return 'Hello, Flask!'
+
+if __name__ == '__main__':
+    app.run(debug=True)
