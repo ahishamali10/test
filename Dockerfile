@@ -20,4 +20,4 @@ EXPOSE 80
 ENV NAME World
 
 # Run app.py when the container launches
-CMD ["gunicorn", "-b", ":8080", "--log-level", "debug", "app:app"]
+CMD ["gunicorn", "-b", ":80", "--log-level", "debug", "app:app"]
