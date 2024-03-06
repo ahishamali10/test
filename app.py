@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 # Configure the SQLAlchemy part
 # Replace 'mysql+pymysql://username:password@localhost/mydatabase' with your actual MySQL database URI
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://python-user:@/python_test?unix_socket=/cloudsql/hale-mercury-415809:us-central1:mysql-db/mysql-db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://python-user:@10.124.32.7/python_test'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
